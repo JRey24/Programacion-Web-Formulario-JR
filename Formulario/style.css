@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fdf3e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 520px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #d62828;
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3b2f2f;
+    font-size: 20px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: #5b4a3f;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#formularioComidas {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 15px;
+    color: #3b2f2f;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #d6c9b6;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 15px;
+}
+
+select {
+    width: 100%;
+    border: 1px solid #d6c9b6;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: 2px solid #f77f00;
+    outline-offset: 1px;
+}
+
+.fila-comida {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+#agregarComida,
+.btn-enviar {
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+#agregarComida {
+    background-image:
+        linear-gradient(rgba(247, 127, 0, 0.75), rgba(247, 127, 0, 0.75)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='80'%3E%3Ctext x='35' y='54' font-size='40'%3E%F0%9F%8D%94%20%F0%9F%8D%9F%20%F0%9F%8D%95%3C/text%3E%3C/svg%3E");
+    padding: 10px 16px;
+}
+
+.btn-enviar {
+    background-image:
+        linear-gradient(rgba(214, 40, 40, 0.45), rgba(214, 40, 40, 0.45)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='90'%3E%3Ctext x='18' y='58' font-size='42'%3E%F0%9F%8D%97%3C/text%3E%3Ctext x='100' y='58' font-size='42'%3E%F0%9F%8D%94%3C/text%3E%3Ctext x='260' y='58' font-size='42'%3E%F0%9F%8D%95%3C/text%3E%3Ctext x='330' y='58' font-size='42'%3E%F0%9F%8D%9F%3C/text%3E%3C/svg%3E");
+    padding: 12px;
+}
+
+#contadorComidas {
+    text-align: center;
+    color: #3b2f2f;
+    font-size: 15px;
+}
+
+.card-seleccion {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#contenedorSelectores {
+    display: grid;
+    gap: 8px;
+}
+
+.resumen-frecuencia {
+    border: 1px solid #f0dcc0;
+    border-radius: 12px;
+    background-color: #fff9f2;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.resumen-frecuencia h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#resultadoSeleccion {
+    color: #3b2f2f;
+    font-size: 14px;
+    line-height: 1.6;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#resultadoSeleccion li {
+    margin-bottom: 6px;
+}
+
+#estadoFrecuencia {
+    margin-top: 8px;
+    color: #b54708;
+    font-size: 13px;
+}
+
+.btn-volver {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f77f00;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.oculto {
+    display: none;
+}
+
+.bloque-puntuacion {
+    border: 1px solid #f0dcc0;
+    border-radius: 12px;
+    padding: 14px;
+    background-color: #fff9f2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subtexto-puntuacion {
+    text-align: center;
+    color: #5b4a3f;
+    font-size: 14px;
+}
+
+.opciones-puntuacion {
+    display: grid;
+    gap: 8px;
+}
+
+.btn-puntuacion {
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.btn-puntuacion:hover {
+    transform: translateY(-1px);
+}
+
+.btn-puntuacion.activo {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.nivel-1 {
+    background-color: #d62828;
+}
+
+.nivel-2 {
+    background-color: #e85d04;
+}
+
+.nivel-3 {
+    background-color: #f77f00;
+}
+
+.nivel-4 {
+    background-color: #fcbf49;
+    color: #3b2f2f;
+}
+
+.nivel-5 {
+    background-color: #2a9d8f;
+}
+
+#resultadoPuntuacion {
+    text-align: center;
+    color: #3b2f2f;
+    font-size: 14px;
+}
