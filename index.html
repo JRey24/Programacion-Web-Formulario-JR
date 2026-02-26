@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario: La mejor Comida de Bogotá</title>
+</head>
+<body>
+    <main class="card">
+        <h1>La mejor Comida de Bogotá</h1>
+        <p class="subtitulo">Ingresa tus 5 comidas favoritas</p>
+
+        <form id="formularioComidas">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+            </div>
+            
+            <div class="campo">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" placeholder="Ej: 20">
+            </div>
+
+            <div class="campo">
+                <label for="comida">Comida favorita</label>
+                <div class="fila-comida">
+                    <input type="text" id="comida" name="comida" placeholder="Ej: Hamburguesa">
+                    <button type="button" id="agregarComida">Agregar</button>
+                </div>
+            </div>
+
+            <p id="contadorComidas">Comidas guardadas: 0/5</p>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </main>
+
+    <script>
+        const comidas = [];
+        const limiteComidas = 5;
+
+        const inputComida = document.getElementById('comida');
+        const inputNombre = document.getElementById('nombre');
+        const botonAgregar = document.getElementById('agregarComida');
+        const contador = document.getElementById('contadorComidas');
+        const formulario = document.getElementById('formularioComidas');
+
+        function actualizarContador() {
+            contador.textContent = `Comidas guardadas: ${comidas.length}/${limiteComidas}`;
+        }
+
+        botonAgregar.addEventListener('click', () => {
+            const nuevaComida = inputComida.value.trim();
+
+            if (!nuevaComida) {
+                alert('Escribe una comida antes de agregar.');
+                return;
+            }
+
+            if (comidas.length >= limiteComidas) {
+                alert('Ya guardaste 5 comidas.');
+                return;
+            }
+
+            comidas.push(nuevaComida);
+            inputComida.value = '';
+            inputComida.focus();
+
+            actualizarContador();
+        });
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const nombreUsuario = inputNombre.value.trim();
+
+            if (comidas.length < limiteComidas) {
+                alert('Debes guardar exactamente 5 comidas antes de enviar.');
+                return;
+            }
+
+            localStorage.setItem('comidasGuardadas', JSON.stringify(comidas));
+            localStorage.setItem('nombreUsuario', nombreUsuario || 'usuario');
+            window.location.href = 'seleccion.html';
+        });
+    </script>
+</body>
+</html>
