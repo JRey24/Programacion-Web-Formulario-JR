@@ -36,53 +36,6 @@
         </form>
     </main>
 
-    <script>
-        const comidas = [];
-        const limiteComidas = 5;
-
-        const inputComida = document.getElementById('comida');
-        const inputNombre = document.getElementById('nombre');
-        const botonAgregar = document.getElementById('agregarComida');
-        const contador = document.getElementById('contadorComidas');
-        const formulario = document.getElementById('formularioComidas');
-
-        function actualizarContador() {
-            contador.textContent = `Comidas guardadas: ${comidas.length}/${limiteComidas}`;
-        }
-
-        botonAgregar.addEventListener('click', () => {
-            const nuevaComida = inputComida.value.trim();
-
-            if (!nuevaComida) {
-                alert('Escribe una comida antes de agregar.');
-                return;
-            }
-
-            if (comidas.length >= limiteComidas) {
-                alert('Ya guardaste 5 comidas.');
-                return;
-            }
-
-            comidas.push(nuevaComida);
-            inputComida.value = '';
-            inputComida.focus();
-
-            actualizarContador();
-        });
-
-        formulario.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const nombreUsuario = inputNombre.value.trim();
-
-            if (comidas.length < limiteComidas) {
-                alert('Debes guardar exactamente 5 comidas antes de enviar.');
-                return;
-            }
-
-            localStorage.setItem('comidasGuardadas', JSON.stringify(comidas));
-            localStorage.setItem('nombreUsuario', nombreUsuario || 'usuario');
-            window.location.href = 'seleccion.html';
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
