@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu Pizza</title>
+</head>
+<body>
+    <main class="card card-seleccion">
+        <h1>🍕 Pedido de pizzas 🍕</h1>
+        <p class="subtitulo" id="mensajeFrecuencia"></p>
+        <section class="resumen-frecuencia">
+            <h2>Paso a paso</h2>
+            <ol class="pasos-pedido">
+                <li>Marca el tipo de pizza que deseas.</li>
+                <li>Escribe la cantidad de cada pizza marcada.</li>
+                <li>Si quieres, agrega detalles del pedido.</li>
+                <li>Presiona el botón "Pedido".</li>
+            </ol>
+        </section>
+
+        <form id="formularioPedido" class="formulario-pedido">
+            <h2>✅ Tipo de pizza</h2>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaJamonQueso">
+                    <input type="checkbox" id="pizzaJamonQueso" name="tipoPizza" value="Jamón y queso">
+                    <span>🍖🧀 Jamón y queso</span>
+                </label>
+                <input type="number" id="cantidadJamonQueso" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaNapolitana">
+                    <input type="checkbox" id="pizzaNapolitana" name="tipoPizza" value="Napolitana">
+                    <span>🍅 Napolitana</span>
+                </label>
+                <input type="number" id="cantidadNapolitana" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaMuzzarella">
+                    <input type="checkbox" id="pizzaMuzzarella" name="tipoPizza" value="Muzzarella">
+                    <span>🧀 Mozzarella</span>
+                </label>
+                <input type="number" id="cantidadMuzzarella" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaHawaiana">
+                    <input type="checkbox" id="pizzaHawaiana" name="tipoPizza" value="Hawaiana">
+                    <span>🍍 Hawaiana</span>
+                </label>
+                <input type="number" id="cantidadHawaiana" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaPepperoni">
+                    <input type="checkbox" id="pizzaPepperoni" name="tipoPizza" value="Pepperoni">
+                    <span>🥩 Pepperoni</span>
+                </label>
+                <input type="number" id="cantidadPepperoni" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaVegetariana">
+                    <input type="checkbox" id="pizzaVegetariana" name="tipoPizza" value="Vegetariana">
+                    <span>🥦 Vegetariana</span>
+                </label>
+                <input type="number" id="cantidadVegetariana" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaCuatroQuesos">
+                    <input type="checkbox" id="pizzaCuatroQuesos" name="tipoPizza" value="Cuatro quesos">
+                    <span>🧀🧀 Cuatro quesos</span>
+                </label>
+                <input type="number" id="cantidadCuatroQuesos" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaPolloChampinones">
+                    <input type="checkbox" id="pizzaPolloChampinones" name="tipoPizza" value="Pollo y champiñones">
+                    <span>🍗🍄 Pollo y champiñones</span>
+                </label>
+                <input type="number" id="cantidadPolloChampinones" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaMexicana">
+                    <input type="checkbox" id="pizzaMexicana" name="tipoPizza" value="Mexicana">
+                    <span>🌶️ Mexicana</span>
+                </label>
+                <input type="number" id="cantidadMexicana" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="fila-pizza">
+                <label class="pizza-check" for="pizzaCriolla">
+                    <input type="checkbox" id="pizzaCriolla" name="tipoPizza" value="Criolla">
+                    <span>🧅🍖🌽 Criolla</span>
+                </label>
+                <input type="number" id="cantidadCriolla" min="0" inputmode="numeric" placeholder="Cantidad">
+            </div>
+
+            <div class="campo">
+                <label for="detallePedido">📝 Detalles del pedido</label>
+                <textarea id="detallePedido" rows="4" placeholder="Ej: sin cebolla, masa delgada..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">🍕 Pedido 🍕</button>
+        </form>
+
+        <section id="resumenFrecuencia" class="resumen-frecuencia">
+            <h2>📋 Resumen del pedido</h2>
+            <ol id="resultadoSeleccion"></ol>
+            <p id="estadoFrecuencia"></p>
+        </section>
+
+        <a href="index.html" class="btn-volver" id="btnVolver">⬅️ Volver a la página principal</a>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
