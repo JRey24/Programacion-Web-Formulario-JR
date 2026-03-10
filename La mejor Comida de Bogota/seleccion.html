@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu comida</title>
+</head>
+<body>
+    <main class="card card-seleccion">
+        <h1>Frecuencia de consumo</h1>
+        <p class="subtitulo" id="mensajeFrecuencia"></p>
+        <div id="contenedorSelectores"></div>
+        <section id="resumenFrecuencia" class="resumen-frecuencia">
+            <h2>Resumen de consumo</h2>
+            <ol id="resultadoSeleccion"></ol>
+            <p id="estadoFrecuencia"></p>
+        </section>
+        <div id="bloquePuntuacion" class="bloque-puntuacion oculto">
+            <h2 id="tituloPuntuacion"></h2>
+            <p class="subtexto-puntuacion">Puntúa de peor (1) a mejor (5)</p>
+            <div id="opcionesPuntuacion" class="opciones-puntuacion"></div>
+            <p id="resultadoPuntuacion"></p>
+        </div>
+        <a href="index.html" class="btn-volver" id="btnVolver">Volver a la página principal</a>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
