@@ -1,22 +1,11 @@
-# Ejercicio de Programacion Web JR
+# Programacion Web JR
 
-Se genera un formulario en el cual se va a hablar sobre los siguientes aspectos
+Se genera un repositorio nuevo donde se van a mantener los nuevos trabajos realizados en la materia de Programcion Web
 
-# Formulario sobre la Mejor Comida de Bogotá
-  1. Ingreso de Nombre
-  2. Ingreso de Edad
-  3. El usuario debe de ingresar 5 comidas (pueden ser sus favoritas)
-     
-       -- De esas 5 comidad deben de desplegarse 5 labels selectores, los cuales deben de conter cuantas veces lo cosnumen a la semana/mes
-     
-       -- Dependiendo de cual es el mas frecuente debe de desplegarse otro opcion donde punte la comida
+A la vez que se Va teniendo un sistema actualizado de lo que se va a construir y como se va a realizar
 
-# Estilos:
+# Orden de los Trabajos
+1. Formulario "La mejor Comida de Bogotá"
+2. Formulario "La mejor Pizza del Mundo"
 
-  -- Fondo o Paleta de Colores, deben hacer relacion a comida rapida o a su gusto, pero debe de transmitir una sensacion de comida
-  
-  -- Los bordes de los labels deben de ser de forma redonda
-  
-  -- Los botones deben de contener en su fondo una imagen de comida
-  
-  -- Fuente al gusto y la que el programador decida
+
